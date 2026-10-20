@@ -57,8 +57,10 @@ Doğrulama komutları:
 
 ```sh
 ./gradlew :backend:test :backend:bootJar :app:assembleDebug
-node --test frontend-tests/auth.test.cjs
+node --test frontend-tests/*.test.cjs
 ```
+
+Arayüz ve işlev kontrolü, kalan demo/eksik alanlar ve ekran görüntüleri: [kontrol raporu](docs/UI-AND-FUNCTIONAL-AUDIT.md).
 
 ## Demo kapsamı
 

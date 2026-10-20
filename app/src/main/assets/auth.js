@@ -143,6 +143,7 @@ function clearSession(message = '') {
   token = ''; refreshToken = ''; tokenExpiresAt = 0;
   callbackSession = undefined;
   tab = 'Özet'; page = ''; products = []; orders = []; ads = []; profile = {};
+  if (typeof searchText !== 'undefined') searchText = { products: '', orders: '' };
   authNotice = message;
   draw();
 }

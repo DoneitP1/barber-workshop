@@ -1,0 +1,497 @@
+[
+  {
+    "active": "Özet",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 320
+  },
+  {
+    "active": "Ürünler",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": 0,
+    "width": 320
+  },
+  {
+    "active": "Siparişler",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": 0,
+    "width": 320
+  },
+  {
+    "active": "Reklam",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 320
+  },
+  {
+    "active": "Hesabım",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 320
+  },
+  {
+    "active": "Özet",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 390
+  },
+  {
+    "active": "Ürünler",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": 0,
+    "width": 390
+  },
+  {
+    "active": "Siparişler",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": 0,
+    "width": 390
+  },
+  {
+    "active": "Reklam",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 390
+  },
+  {
+    "active": "Hesabım",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 390
+  },
+  {
+    "active": "Özet",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 768
+  },
+  {
+    "active": "Ürünler",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": 0,
+    "width": 768
+  },
+  {
+    "active": "Siparişler",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": 0,
+    "width": 768
+  },
+  {
+    "active": "Reklam",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 768
+  },
+  {
+    "active": "Hesabım",
+    "labels": [
+      {
+        "fits": true,
+        "label": "Özet",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Ürünler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Siparişler",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Reklam",
+        "verticalGap": 4
+      },
+      {
+        "fits": true,
+        "label": "Hesabım",
+        "verticalGap": 4
+      }
+    ],
+    "overflow": false,
+    "searchOffset": null,
+    "width": 768
+  }
+]
