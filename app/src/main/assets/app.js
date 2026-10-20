@@ -196,14 +196,23 @@ function profileModal() {
     submitForm(event.target, async () => { profile = await req('/profile', 'PUT', Object.fromEntries(new FormData(event.target))); closeModal(); draw(); });
   };
 }
+function salesChart(dailySales) {
+  const max = Math.max(0, ...dailySales.map(day => Number(day.value)));
+  if (max === 0) return '<div class="chart-empty">Seçili dönemde satış bulunmuyor.</div>';
+  const ticks = dailySales.length === 1 ? [0] : [...new Set(Array.from({length: Math.min(5, dailySales.length)}, (_, index) => Math.round(index * (dailySales.length - 1) / Math.min(4, dailySales.length - 1))))];
+  return `<div class="chart" role="img" aria-label="${esc(dailySales[0].label)} – ${esc(dailySales.at(-1).label)} günlük satış grafiği">
+    <div class="chart-scale"><span>Günlük ciro</span><span>En yüksek ${money(max)}</span></div>
+    <div class="chart-plot">${dailySales.map(day => `<div class="chartcol" title="${esc(day.label)}: ${esc(money(day.value))}"><div class="chartbar" style="height:${Math.max(0, Number(day.value) / max * 100)}%"></div></div>`).join('')}</div>
+    <div class="chart-axis">${ticks.map(index => `<span>${esc(dailySales[index].label)}</span>`).join('')}</div>
+  </div>`;
+}
 async function reportPage() {
   const generation = viewGeneration;
   shell(`${pageHeader('Satış raporları')}<div class="loading-state" role="status">Rapor hazırlanıyor…</div>`);
   try {
     const data = await req('/reports?days=' + days);
     if (!isCurrent(generation)) return;
-    const max = Math.max(0, ...data.dailySales.map(value => Number(value.value)));
-    const chart = max > 0 ? `<div class="chart">${data.dailySales.map(value => `<div class="chartcol"><div class="chartbar" style="height:${Math.max(0, value.value / max * 95)}px"></div><span>${esc(value.label)}</span></div>`).join('')}</div>` : '<div class="chart-empty">Seçili dönemde satış bulunmuyor.</div>';
+    const chart = salesChart(data.dailySales);
     shell(`${pageHeader('Satış raporları')}<div class="filters" aria-label="Rapor dönemi">${[7, 30, 90].map(value => `<button class="${days === value ? 'sel' : ''}" onclick="days=${value};draw()">Son ${value} gün</button>`).join('')}</div>
       <div class="metricgrid">${metric('Ciro', money(data.revenue), 'money')}${metric('Sipariş', data.orderCount, 'orders')}</div>${metric('Ortalama sepet', money(data.averageBasket), 'products')}
       <h2 class="section">Günlük satış</h2>${chart}<h2 class="section">En çok satan ürünler</h2>${data.topProducts.map(product => `<div class="item"><div class="grow"><div class="title">${esc(product.name)}</div><div class="small">${product.quantity} adet</div></div><b>${money(product.revenue)}</b></div>`).join('') || emptyState('Bu dönemde satılan ürün yok.')}`);

@@ -79,3 +79,13 @@ node frontend-tests/serve-fixtures.mjs
 ![Düzeltilen arama alanı ve alt menü](screenshots/orders-mobile-390.png)
 
 ![Özet sekmesinde ikon ve metin ayrımı](screenshots/overview-mobile-390.png)
+
+## 30 ve 90 günlük grafik düzeltmesi
+
+Her güne ayrılan en az 28 px genişlik ve 12 px aralık yüzünden uzun dönem grafikleri yatay taşıyordu. İlk görünen eski günlerde satış olmadığı için grafik boş görünüyordu; satış çubukları sağda kalıyordu.
+
+Grafik artık tüm günleri mevcut genişliğe sığdırır ve beş tarih etiketi gösterir. Günlük değerler değişmeden korunur; üstte en yüksek günlük ciro gösterilir. 390 px mobil önizlemede 30 ve 90 günlük grafiklerin genişliği ve içerik genişliği 356 px olarak aynı ölçüldü; üç satış günü de görünür. Kontrol, yerel arayüz örnek verileriyle yapıldı. Android debug APK yeniden derlendi ve emülatöre kuruldu. Bu düzeltme için otomatik test çalıştırılmadı.
+
+![30 günlük grafik — arayüz örnek verisi](screenshots/sales-30-days-mobile.png)
+
+![90 günlük grafik — arayüz örnek verisi](screenshots/sales-90-days-mobile.png)
