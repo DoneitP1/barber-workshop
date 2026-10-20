@@ -98,3 +98,77 @@ button:focus-visible{outline:3px solid #9678fa66;outline-offset:2px}
 .form-error{color:#b42318;font-size:12px;line-height:1.5;margin-top:10px}
 .chart-empty{min-height:145px;display:grid;place-items:center;text-align:center;background:white;border-radius:15px;color:var(--muted);font-size:12px}
 @media(max-width:360px){.bottom{padding-left:4px;padding-right:4px}.bottom button{font-size:10px}.pad{padding:14px}.sheetfoot{flex-direction:column}.filters button{font-size:11px;padding:8px 11px}}
+
+/* Workshop details: the original purple palette, with a more personal layout. */
+.pad{padding:22px 20px}
+.head{font-size:26px;letter-spacing:-.7px;line-height:1.18}
+.sub{line-height:1.6;margin-top:7px}
+.section{display:flex;align-items:center;gap:9px;font-size:18px;letter-spacing:-.35px;margin:24px 0 12px}
+.section::before{content:"";width:4px;height:18px;background:var(--purple);border-radius:3px;flex:none}
+.workspace-head{display:flex;align-items:center;gap:11px;margin:0 0 22px}
+.workspace-head b{font-size:14px;letter-spacing:-.3px}
+.workspace-head .small{margin-top:3px}
+.brand-mark{display:grid;place-items:center;width:42px;height:42px;flex:none;border-radius:14px 14px 14px 4px;background:var(--purple);color:white;font-size:15px;font-weight:800;letter-spacing:-1px}
+.eyebrow{color:var(--deep);font-size:10px;font-weight:750;letter-spacing:1.4px;line-height:1.6;margin-bottom:7px}
+.store-intro{background:var(--lilac);border:1px solid var(--line);border-radius:24px 24px 24px 7px;padding:22px;margin-bottom:15px}
+.store-intro .head{margin:0;overflow-wrap:anywhere}
+.store-intro>p{color:var(--muted);font-size:12px;line-height:1.6;margin:10px 0 17px}
+.store-intro .success{margin:0;padding:0;border-radius:0;background:transparent;color:var(--green);font-size:11px;gap:7px}
+.store-intro .success .icon{width:17px;height:17px}
+.store-intro .success>span:last-child{font-size:10px;font-weight:500}
+.page-heading{margin:4px 0 17px}
+.page-heading .sub{margin-bottom:0}
+.metricgrid{gap:11px;margin:14px 0}
+.metric{position:relative;padding:18px 15px 15px;min-height:119px;border-radius:19px;box-shadow:0 3px 10px #31255504}
+.metric .ico{position:absolute;top:15px;right:14px;color:var(--deep)}
+.metric .ico .icon{width:18px;height:18px}
+.metric strong{font-size:23px;letter-spacing:-.8px;margin:22px 0 6px;line-height:1.15;overflow-wrap:anywhere}
+.metric span{font-size:11px}
+.metric-sales{background:var(--lilac);border-color:var(--line)}
+.metric-sales strong{color:var(--deep);font-size:21px}
+.report-link{display:flex;align-items:center;gap:12px;width:100%;padding:14px 15px;border:1px solid var(--line);border-radius:18px;background:#fff;color:var(--ink);text-align:left;margin:16px 0 4px}
+.report-link .tile{width:38px;height:38px;border-radius:12px}
+.report-link b{display:block;font-size:13px}
+.report-link .small{display:block;font-size:10px;line-height:1.4}
+.report-link>.icon{width:17px;height:17px;color:var(--deep)}
+.item,.card{border-radius:19px;padding:16px;box-shadow:0 3px 10px #31255504}
+.item{margin-bottom:12px}
+.title{font-size:13px;line-height:1.45}
+.small{line-height:1.5}
+.price{font-size:13px;margin-top:9px;line-height:1.5}
+.order-card .price{justify-content:space-between;border-top:1px solid var(--line);padding-top:10px;margin-top:11px}
+.order-card .price>.icon{width:16px;height:16px}
+.product-card{align-items:flex-start;gap:12px}
+.product-card>.tile{width:44px;height:54px;border-radius:14px 14px 14px 4px}
+.product-title{align-items:flex-start;gap:8px}
+.product-title .title{min-width:0}
+.product-title .pill{padding:3px 7px;font-size:9px}
+.stock-count{display:inline-block;border-left:1px solid var(--line);margin-left:7px;padding-left:8px;font-size:10px;color:var(--muted);font-weight:500}
+.actions{gap:7px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.actions button{border:0;background:var(--lilac);font-weight:650;padding:7px 11px}
+.actions button+button{background:transparent;color:var(--muted)}
+.btn{border-radius:14px}
+.search{border-radius:16px;min-height:52px}
+.filters{background:transparent;padding:0;gap:7px;margin:14px 0 17px;border-radius:0}
+.filters button{flex:0 0 auto;border:1px solid var(--line);border-radius:12px;background:#fff;padding:8px 15px}
+.filters .sel{background:var(--deep);color:#fff;border-color:var(--deep);box-shadow:none}
+.bottom{bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(calc(100% - 28px),592px);padding:7px 6px;background:#ffffffed;border:1px solid var(--line);border-radius:24px;box-shadow:0 8px 24px #31255512}
+.bottom button{min-height:57px;gap:3px;font-size:10px;line-height:14px;border-radius:17px}
+.nav-icon{width:30px;height:30px;border-radius:11px}
+.nav-icon .icon{width:21px;height:21px}
+.nav-label{line-height:14px}
+.bottom button.sel{background:var(--lilac)}
+.bottom button.sel .nav-icon{background:transparent;color:var(--deep);box-shadow:none}
+.brand{padding:40px 30px 18px;text-align:left}
+.brand .logo{margin:0 0 22px;border-radius:20px 20px 20px 6px;box-shadow:none}
+.brand h1{font-size:29px;letter-spacing:-.8px}
+.brand p{max-width:320px;font-size:13px;line-height:1.7;margin-bottom:0}
+.tabswitch{padding:5px;border-radius:16px}
+.tabswitch button{border-radius:12px}
+#authForm{padding:23px 20px}
+#authTitle{font-size:19px;letter-spacing:-.35px}
+.sheet{border-radius:26px 26px 0 0}
+.chart,.chart-empty{border-radius:20px;border:1px solid var(--line);padding:18px 14px}
+.back{border:1px solid var(--line);border-radius:14px;flex:none}
+button:active{opacity:.8}
+@media(max-width:360px){.pad{padding:19px 14px}.store-intro{padding:19px}.head{font-size:24px}.bottom{width:calc(100% - 18px);padding-left:4px;padding-right:4px}.bottom button{font-size:10px}.item{padding:13px}.product-card{gap:9px}.product-card>.tile{width:36px;height:46px}.metric{padding-left:13px;padding-right:13px}.metric-sales strong{font-size:18px}.brand{padding-left:24px;padding-right:24px}}

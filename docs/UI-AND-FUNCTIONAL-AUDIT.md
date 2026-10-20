@@ -89,3 +89,13 @@ Grafik artık tüm günleri mevcut genişliğe sığdırır ve beş tarih etiket
 ![30 günlük grafik — arayüz örnek verisi](screenshots/sales-30-days-mobile.png)
 
 ![90 günlük grafik — arayüz örnek verisi](screenshots/sales-90-days-mobile.png)
+
+## Mor paleti koruyan tasarım dokunuşları
+
+BW marka detayı, asimetrik mağaza özeti, yeniden düzenlenen metrik/ürün/sipariş kartları, başlık işaretleri ve yüzen alt menü eklendi. Temel renk değişkenleri korundu: arka plan `#f7f5ff`, mor `#9678fa`, koyu mor `#7655e8` ve lila `#f0ecff`.
+
+Yerel örnek verilerle 320 ve 390 px görünüm incelendi. 320 px ürün ekranında içerik genişliği 320 px kaldı ve beş menü etiketi kendi alanına sığdı. Android APK ve backend JAR derlendi. Bu turda cihaz/emülatör bağlı olmadığı için yeni APK kurulmadı. Otomatik test çalıştırılmadı.
+
+![Yeni ana sayfa — yerel örnek veri](screenshots/workshop-overview-refresh.png)
+
+![Yeni ürün kartları — yerel örnek veri](screenshots/workshop-products-refresh.png)

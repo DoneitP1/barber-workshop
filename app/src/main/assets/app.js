@@ -26,7 +26,7 @@ function status(value) {
 }
 function shell(content) { root.innerHTML = `<main class="wrap"><div class="pad">${content}</div></main>${nav()}`; }
 function emptyState(message) { return `<div class="empty-state">${esc(message)}</div>`; }
-function metric(label, value, symbol) { return `<div class="metric"><div class="ico">${icon(symbol)}</div><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`; }
+function metric(label, value, symbol) { return `<div class="metric${symbol === 'money' ? ' metric-sales' : ''}"><div class="ico">${icon(symbol)}</div><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`; }
 function pageHeader(title) { return `<div class="row"><button class="back" aria-label="Geri dön" onclick="openPage('')">${icon('back')}</button><h1 class="head" style="font-size:19px">${esc(title)}</h1></div>`; }
 function showPageError(error, generation) {
   if (!token || generation !== viewGeneration) return;
@@ -57,16 +57,16 @@ async function dashboard() {
   try {
     const data = await req('/dashboard');
     if (!isCurrent(generation)) return;
-    shell(`<div class="row between"><div><div class="small" style="color:var(--deep)">BarBer Tedarikçi</div><h1 class="head">${esc(data.storeName || 'Mağazam')}</h1></div><button class="back" aria-label="Mağaza özetini yenile" onclick="draw()">${icon('refresh')}</button></div>
-      <div class="success row">${icon('check')}<span class="grow">Mağazanız yayında</span><span>Onaylı</span></div>
+    shell(`<header class="workspace-head"><div class="brand-mark" aria-hidden="true">BW</div><div class="grow"><b>Barber Workshop</b><div class="small">Tedarikçi çalışma alanı</div></div><button class="back" aria-label="Mağaza özetini yenile" onclick="draw()">${icon('refresh')}</button></header>
+      <section class="store-intro"><div class="eyebrow">MAĞAZA ÖZETİ</div><h1 class="head">${esc(data.storeName || 'Mağazam')}</h1><p>Ürünleriniz ve siparişleriniz bir arada.</p><div class="success row">${icon('check')}<span class="grow">Mağazanız yayında</span><span>Onaylı</span></div></section>
       ${data.lowStockCount ? `<div class="warning row">${icon('warning')}<span>${Number(data.lowStockCount)} ürünün stoğu azaldı</span></div>` : ''}
-      <button class="btn outline full" onclick="openPage('reports')">${icon('chart')}<span>Satış raporları</span></button>
       <div class="metricgrid">${metric('Ürün', data.productCount, 'products')}${metric('Sipariş', data.orderCount, 'orders')}${metric('Düşük stok', data.lowStockCount, 'warning')}${metric('Toplam satış', money(data.totalSales), 'money')}</div>
+      <button class="report-link" onclick="openPage('reports')"><span class="tile">${icon('chart')}</span><span class="grow"><b>Satış raporları</b><span class="small">Mağazanızın performansını inceleyin</span></span>${icon('chevron')}</button>
       <h2 class="section">Son siparişler</h2>${(data.latestOrders || []).map(orderCard).join('') || emptyState('Henüz sipariş bulunmuyor.')}`);
   } catch (error) { showPageError(error, generation); }
 }
 function productPage() {
-  shell(`<div class="row between"><div><h1 class="head">Ürünlerim</h1><div class="sub">${products.length} ürün kataloğunuzda</div></div><button class="btn" onclick="productModal()">${icon('plus')}<span>Ekle</span></button></div>
+  shell(`<div class="row between page-heading"><div><div class="eyebrow">KATALOĞUNUZ</div><h1 class="head">Ürünlerim</h1><div class="sub">${products.length} ürün kataloğunuzda</div></div><button class="btn" onclick="productModal()">${icon('plus')}<span>Ekle</span></button></div>
     ${searchField('pSearch', 'Ürün adı, kod veya kategori ara', searchText.products, 'updateProductQuery')}
     <div class="filters" aria-label="Ürün filtreleri">${['Tümü', 'Aktif', 'Pasif', 'Düşük stok'].map(value => `<button class="${filters.products === value ? 'sel' : ''}" aria-pressed="${filters.products === value}" onclick="setProductFilter('${value}')">${value}</button>`).join('')}</div><div id="productList"></div>`);
   drawProducts();
@@ -79,7 +79,7 @@ function matchesProduct(product) {
     && (filters.products === 'Tümü' || filters.products === 'Aktif' && product.active || filters.products === 'Pasif' && !product.active || filters.products === 'Düşük stok' && product.stock < 10);
 }
 function drawProducts() {
-  $('#productList').innerHTML = products.filter(matchesProduct).map(product => `<article class="item"><div class="tile">${icon('scissors')}</div><div class="grow"><div class="title">${esc(product.name)}</div><div class="small">${esc(product.category)} · ${esc(product.sku)}</div><div class="price">${money(product.price)} · Stok: ${product.stock}</div><div class="actions"><button onclick="productModal('${product.id}')">Düzenle</button><button onclick="toggleProduct('${product.id}',this)">${product.active ? 'Pasife al' : 'Yayına al'}</button></div></div><span class="pill ${product.active ? 'ok' : ''}">${product.active ? 'Aktif' : 'Pasif'}</span></article>`).join('') || emptyState('Eşleşen ürün bulunamadı.');
+  $('#productList').innerHTML = products.filter(matchesProduct).map(product => `<article class="item product-card"><div class="tile">${icon('scissors')}</div><div class="grow"><div class="row between product-title"><div class="title">${esc(product.name)}</div><span class="pill ${product.active ? 'ok' : ''}">${product.active ? 'Aktif' : 'Pasif'}</span></div><div class="small">${esc(product.category)} · ${esc(product.sku)}</div><div class="price">${money(product.price)} <span class="stock-count">Stok: ${product.stock}</span></div><div class="actions"><button onclick="productModal('${product.id}')">Düzenle</button><button onclick="toggleProduct('${product.id}',this)">${product.active ? 'Pasife al' : 'Yayına al'}</button></div></div></article>`).join('') || emptyState('Eşleşen ürün bulunamadı.');
 }
 async function toggleProduct(id, button) {
   const product = products.find(value => value.id === id);
@@ -120,7 +120,7 @@ function orderCard(order) {
   return `<button type="button" class="item order-card" aria-label="${esc(order.id)} sipariş detayını aç" onclick="selectedOrder='${order.id}';openPage('order')"><div class="grow"><div class="row between"><div class="title">${esc(order.id)}</div>${status(order.status)}</div><div class="small">${esc(order.date)} · ${esc(order.salon)}</div><div class="price row"><span>${money(order.total)}</span>${icon('chevron')}</div></div></button>`;
 }
 function orderPageList() {
-  shell(`<h1 class="head">Salon siparişleri</h1>${searchField('oSearch', 'Sipariş no veya salon ara', searchText.orders, 'updateOrderQuery')}
+  shell(`<div class="page-heading"><div class="eyebrow">SİPARİŞ YÖNETİMİ</div><h1 class="head">Salon siparişleri</h1></div>${searchField('oSearch', 'Sipariş no veya salon ara', searchText.orders, 'updateOrderQuery')}
     <div class="filters" aria-label="Sipariş filtreleri">${['Tümü', 'Bekliyor', 'Onaylı', 'Hazırlanıyor', 'Teslim edildi'].map(value => `<button class="${filters.orders === value ? 'sel' : ''}" aria-pressed="${filters.orders === value}" onclick="setOrderFilter('${value}')">${value}</button>`).join('')}</div><div id="orderList"></div>`);
   drawOrders();
 }
